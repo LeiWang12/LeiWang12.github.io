@@ -45,9 +45,11 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="/">Home</a>
+          <a class="main-nav-link" href="/">首页</a>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+          <a class="main-nav-link" href="/archives">目录</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
         
       </nav>
       <nav id="sub-nav">
@@ -79,7 +81,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/08/hello-world/">Hello World</a>
+      <a class="article-title" href="/2016/09/08/hello-world/">搭建Hexo博客</a>
     </h1>
   
 
@@ -87,20 +89,42 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="搭建前提"><a href="#搭建前提" class="headerlink" title="搭建前提"></a>搭建前提</h2><p>1、使用github创建一个UserName.github.io版本库文件，UserName是你的github登录名。</p>
+<p>2、安装node.js</p>
+<p>3、安装git</p>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><p>一、安装hexo</p>
+<ol>
+<li>cd /  </li>
+<li>npm install hexo-cli -g  </li>
+</ol>
+<p>在本地硬盘新建一个空目录（eg:blog）,进入文件夹，鼠标右键打开git bash shell</p>
+<p>安装博客所需文件</p>
+<ol>
+<li>cd /   </li>
+<li>hexo init Hexo</li>
+<li>cd /Hexo</li>
+<li>npm install</li>
+<li>hexo generate（可简写为hexo g）</li>
+<li>hexo sever（可简写为hexo s）</li>
+</ol>
+<p>如果你在本地访问<a href="http://localhost:4000/，成功看到博客网页，证明本地安装成功" target="_blank" rel="external">http://localhost:4000/，成功看到博客网页，证明本地安装成功</a></p>
+<p>部署到github</p>
+<p>1、修改hexo博客下_config.yml文件</p>
+<p>deploy:</p>
+<pre><code>type:git
+repository:你的github的仓库git地址
+branch:master
+</code></pre><p>2、在git shell输入命令</p>
+<pre><code>hexo g  编译文件
 
+hexo s   启动本地服务，检查是否正确
+
+hexo d   上传到github服务器
+</code></pre><h2 id="坑：在github上新建的仓库名字一定要和自己登录github网站的用户名一致！！！"><a href="#坑：在github上新建的仓库名字一定要和自己登录github网站的用户名一致！！！" class="headerlink" title="坑：在github上新建的仓库名字一定要和自己登录github网站的用户名一致！！！"></a>坑：在github上新建的仓库名字一定要和自己登录github网站的用户名一致！！！</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/08/hello-world/" data-id="cisu0jfc60000l8r9xdhk95t4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/08/hello-world/" data-id="cisu0x0jv0000ewr928e0b44t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -140,7 +164,7 @@
       <ul>
         
           <li>
-            <a href="/2016/09/08/hello-world/">Hello World</a>
+            <a href="/2016/09/08/hello-world/">搭建Hexo博客</a>
           </li>
         
       </ul>
@@ -163,9 +187,11 @@
     </div>
     <nav id="mobile-nav">
   
-    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="/" class="mobile-nav-link">首页</a>
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+    <a href="/archives" class="mobile-nav-link">目录</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
   
 </nav>
     
